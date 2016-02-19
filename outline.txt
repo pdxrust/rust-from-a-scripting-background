@@ -1,6 +1,7 @@
-60-minute hands-on tutorial with the goal of getting people from an
+60-minute "hands-on" tutorial with the goal of getting people from an
 intermediate proficiency with a scripting language to basic proficiency with
-Rust concepts and syntax. 
+Rust concepts and syntax. Getting help on the interactive examples will have
+to wait till the second hour of the meeting. 
 
 Part 1: Introduction (15 mins)
 
@@ -54,6 +55,10 @@ Part 2: Why Safety Matters (15mins)
       actually doing
 
 10mins: What's wrong with the current systems languages? 
+
+Hands-on: Maybe an interactive demo or visualization of an exploit, if we can
+find one.
+
     * Walk through high-level view of a use-after-free exploit
     * What's wrong is that they expect too much of programmers
 
@@ -63,6 +68,13 @@ This part is basically section 4 of The Book (http://doc.rust-lang.org/stable/bo
 but skipping as much as possible. 
 
 Basic Syntax: (~5mins)
+
+Hands-on: Hello World in the playpen which demonstrates each concept
+correctly, then does it incorrectly. Attempt to fix the errors. The correct
+section of the script can be identical to the slide for this part. Goal is
+visual recognition of the very basics, and comfort that error messages aren't
+the end of the world.
+
     4.1. Variable Bindings
     4.2. Functions
     4.3. Primitive Types
@@ -70,10 +82,17 @@ Basic Syntax: (~5mins)
     4.32. Operators
 
 Functions:
+
+Is there even time for this part without going too far into the type system?
+
     4.15. Method Syntax
     4.24. Universal Function Call Syntax
 
 Logic: (~5mins)
+
+Hands-on: Some kind of fizz-buzz flavored thing from hackerrank with 1 good
+match statement and 1 bad one that students stare at and fix
+
     4.5. if
     4.6. Loops
     4.13. Match
@@ -81,13 +100,22 @@ Logic: (~5mins)
     4.21. if let
 
 Borrow Checker, your robotic mentor: (~10mins)
+
+Hands-on: Trivial playpen examples which only work after you rearrange the
+lines. Probably something from rust by example will need only slight
+modification.
+
     4.7. Ownership
     4.8. References and Borrowing
     4.9. Lifetimes
     4.26. `const` and `static`
     4.10. Mutability
 
-Data structures: (~5mins)
+Data structures: (~5mins) 
+
+Pick 1 or 2 and roll them in with functions and logic, to give time for a
+better hands-on example?
+
     4.11. Structs
     4.12. Enums
     4.16. Vectors
@@ -96,6 +124,9 @@ Data structures: (~5mins)
 
 Part 4: What we skipped (5 mins)
 * Unsafe
+* Concurrency (it's easy, though!)
+* File IO
+* Using crates
 * The entire type system: (this list is just here for reference of what the
                            book has that we're leaving out, NOT supposed to be 
                            packed into 5mins) 
