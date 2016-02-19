@@ -1,0 +1,115 @@
+60-minute hands-on tutorial with the goal of getting people from an
+intermediate proficiency with a scripting language to basic proficiency with
+Rust concepts and syntax. 
+
+Part 1: Introduction (15 mins)
+
+5mins: Should you care about Rust?
+    * Define systems programming
+    * When is compiled > interpereted?
+        * Improve performance of code bottlenecks
+        * Targeting embedded/IoT platforms
+    * When is Rust > other systems languages?
+        * Safety
+        * Easy concurrency
+    * When is interpereted > compiled?
+        * Faster development if code failure is ok
+        * Care less about the platform the code runs on
+    * When are other systems languages > Rust?
+        * Rely on an esoteric library that you don't have time to rebuild
+        * Job hunting at a company permanently invested in another language
+
+10mins: The Rust Ecosystem
+    * Stable vs nightly
+    * Cargo, crates are libraries
+    * Installation options
+        * System packages (usually just stable)
+        * Multirust
+        * rustup
+        * Don't install and use play.r-l.o
+    * Rustaceans
+        * Code of Conduct applies; early decision to exclude people who want a
+          place to troll or fight without moderation. 
+        * users.r-l.o
+        * IRC
+            * #rust, #rust-beginners, #rust-internals on irc.mozilla.org
+        * Reddit (for better or worse), reddit.com/r/rust
+        * Twitter @rustlang
+        * rustaceans.net is a directory of rust people
+        * File issues on GitHub, ask questions on IRC or StackOverflow
+
+Part 2: Why Safety Matters (15mins)
+
+5mins: High-level overview of computer anatomy
+    * Memory is bits. 1s and 0s. 
+        * RAM is bits you can get to fast
+        * disk is bits you can get to slower
+    * CPUs have registers and instructions
+        * Instruction set architectures are why you can't just load the same 
+          Linux on your laptop and a raspberry pi
+    * Systems languages compile to assembly, which is the instructions that
+      your CPU executes
+    * General rule of thumb: The *smaller* and *faster* a program you want to
+      write, the more hands-on you have to get with what the computer is
+      actually doing
+
+10mins: What's wrong with the current systems languages? 
+    * Walk through high-level view of a use-after-free exploit
+    * What's wrong is that they expect too much of programmers
+
+Part 3: How Rust Helps (25 mins)
+
+This part is basically section 4 of The Book (http://doc.rust-lang.org/stable/book/syntax-and-semantics.html) 
+but skipping as much as possible. 
+
+Basic Syntax: (~5mins)
+    4.1. Variable Bindings
+    4.2. Functions
+    4.3. Primitive Types
+    4.4. Comments
+    4.32. Operators
+
+Functions:
+    4.15. Method Syntax
+    4.24. Universal Function Call Syntax
+
+Logic: (~5mins)
+    4.5. if
+    4.6. Loops
+    4.13. Match
+    4.14. Patterns
+    4.21. if let
+
+Borrow Checker, your robotic mentor: (~10mins)
+    4.7. Ownership
+    4.8. References and Borrowing
+    4.9. Lifetimes
+    4.26. `const` and `static`
+    4.10. Mutability
+
+Data structures: (~5mins)
+    4.11. Structs
+    4.12. Enums
+    4.16. Vectors
+    4.17. Strings
+
+
+Part 4: What we skipped (5 mins)
+* Unsafe
+* The entire type system: (this list is just here for reference of what the
+                           book has that we're leaving out, NOT supposed to be 
+                           packed into 5mins) 
+    4.18. Generics
+    4.19. Traits
+    4.22. Trait Objects
+    4.23. Closures
+    4.27. Attributes
+    4.28. `type` aliases
+    4.29. Casting between types
+    4.30. Associated Types
+    4.31. Unsized Types
+    4.33. Deref coercions
+    4.34. Macros
+    4.35. Raw Pointers
+
+Final slide: What next? Re-use ecosystem summary slide
