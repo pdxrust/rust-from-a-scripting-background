@@ -75,6 +75,9 @@ section of the script can be identical to the slide for this part. Goal is
 visual recognition of the very basics, and comfort that error messages aren't
 the end of the world.
 
+    basic_syntax.rs
+    http://rustbyexample.com/primitives/literals.html
+
     4.1. Variable Bindings
     4.2. Functions
     4.3. Primitive Types
@@ -83,7 +86,10 @@ the end of the world.
 
 Functions:
 
-Is there even time for this part without going too far into the type system?
+Needs diagram to show the boilerplate syntax of specifying types; stay out of
+type system other than that
+
+    function_and_operator.rs
 
     4.15. Method Syntax
     4.24. Universal Function Call Syntax
