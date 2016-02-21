@@ -10,4 +10,14 @@ There will be hands-on examples, so bring your laptop! If you don't have
 access to a laptop and would like to borrow one for the meeting, let edunham
 know."
 
+## Building Slides
 
+```
+$ cd slides
+$ virtualenv v
+$ source v/bin/activate
+(v)$ pip install -r requirements.txt
+(v)$ make slides 
+(v)$ firefox _build/slides/index.html
+(v)$ deactivate # leave virtualenv
+```
