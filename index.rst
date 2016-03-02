@@ -400,12 +400,18 @@ Hey, Pythonistas!
         , what_to_say
     ) ;           }
 
+.. note:: 
 
+    The only whitespace which matters is that which separates tokens.
+    ``fnmain`` is different from ``fn main``. Other than that, the compiler
+    doesn't enforce any rules, though you can use
+    https://github.com/manishearth/rust-clippy and
+    https://github.com/rust-lang-nursery/rustfmt for formatting and style
+    guidance
 
 
 Primitive Types
 ---------------
-
 
 * signed integers: i8, i16, i32, i64 and isize (pointer size)
 * unsigned integers: u8, u16, u32, u64 and usize (pointer size)
@@ -422,6 +428,9 @@ http://doc.rust-lang.org/stable/std/primitive.bool.html
 
 
 .. note::
+
+    Here we're skipping book sections...
+
         4.11. Structs
         4.12. Enums
         4.16. Vectors
