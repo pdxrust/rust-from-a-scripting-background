@@ -5,7 +5,7 @@ Starting Rust From A Scripting Background
 
 
 Welcome!
-========
+-=======
 
 You:
 
@@ -126,9 +126,11 @@ Applications programming: (Python, Ruby, Java)
     has expected programmers to memorize all the rules for how not to make
     mistakes.
 
-.. slide:: _static/lampstack.png
+.. slide:: 
 
-https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29#/media/File:LAMP_software_bundle.svg
+    .. figure:: _static/lampstack.png
+
+    https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29#/media/File:LAMP_software_bundle.svg
 
 
 Rust vs Other Systems Languages
@@ -204,9 +206,11 @@ The Rust Ecosystem
 Stable vs Nightly
 -----------------
 
-    "The stable release channel will provide pain-free upgrades, and the nightly
-    channel will give early adopters access to unfinished features as we work on
-    them."
+|
+
+"The stable release channel will provide pain-free upgrades, and the nightly
+channel will give early adopters access to unfinished features as we work on
+them."
 
 .. note::
 
@@ -745,10 +749,7 @@ Borrowing Errors: Can't use after move
     <anon>:5:43: 5:52 error: use of moved value: `immutable` [E0382]
     <anon>:5         println!("immutable contains {}", immutable);
                                                        ^~~~~~~~~
-    <std macros>:2:25: 2:56 note: in this expansion of format_args!
-    <std macros>:3:1: 3:54 note: in this expansion of print! (defined in <std
-    macros>)
-    <anon>:5:9: 5:54 note: in this expansion of println! (defined in <std macros>)
+    ...
     <anon>:5:43: 5:52 help: see the detailed explanation for E0382
     <anon>:4:13: 4:24 note: `immutable` moved here because it has type
     `collections::string::String`, which is moved by default
@@ -756,7 +757,7 @@ Borrowing Errors: Can't use after move
                          ^~~~~~~~~~~
 
 What we skipped
-===============
+---------------
 
 * Unsafe
 * Concurrency 
@@ -780,7 +781,7 @@ What we skipped
         4.35. Raw Pointers
 
 What next?
-==========
+----------
 
 * Meet PDX Rustaceans and the Servo team
 * Set up Rust
