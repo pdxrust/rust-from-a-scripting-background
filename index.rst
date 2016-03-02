@@ -3,9 +3,11 @@ Starting Rust From A Scripting Background
 
 3/2/2016
 
+Follow Along: http://rust-from-a-scripting-background.readthedocs.org/en/latest/
+
 
 Welcome!
--=======
+--------
 
 You:
 
@@ -18,13 +20,6 @@ We (pdxrust):
 * ~30 Rust users from the Portland area
 * Follow the Rust code of conduct
 * Have all kinds of different day jobs
-
-.. note::
-
-    60-minute "hands-on" tutorial with the goal of getting people from an
-    intermediate proficiency with a scripting language to basic proficiency
-    with Rust concepts and syntax. Getting help on the interactive examples
-    will have to wait till the second hour of the meeting.
 
 Tonight
 -------
@@ -49,12 +44,16 @@ Computer Anatomy
 Memory
 ------
 
+.. figure:: _static/stack-and-heap.png
+   :align: right
+
 RAM is quick to access but impermanent
 
 Disk is slower to access but more permanent
 
 Stack & Heap are abstractions for how a program manages its own memory
 
+(https://en.wikipedia.org/wiki/Data_segment#/media/File:Typical_computer_data_memory_arrangement.png)
 
 CPU
 ---
@@ -126,12 +125,16 @@ Applications programming: (Python, Ruby, Java)
     has expected programmers to memorize all the rules for how not to make
     mistakes.
 
-.. slide:: 
+Systems vs Application Code
+---------------------------
 
-    .. figure:: _static/lampstack.png
+.. figure:: _static/lampstack.png
 
-    https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29#/media/File:LAMP_software_bundle.svg
+(https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29#/media/File:LAMP_software_bundle.svg)
 
+.. note:: 
+
+    Systems code (ie kernel, drivers, etc) is pretty much all C today.
 
 Rust vs Other Systems Languages
 -------------------------------
