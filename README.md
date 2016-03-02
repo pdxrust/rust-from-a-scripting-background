@@ -13,7 +13,6 @@ know."
 ## Building Slides
 
 ```
-$ cd slides
 $ virtualenv v
 $ source v/bin/activate
 (v)$ pip install -r requirements.txt
