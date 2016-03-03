@@ -172,6 +172,11 @@ Rust vs Other Systems Languages
     hunting a job at a C++-only shop, the things you learn from Rust will
     improve your code, but it might not be your best choice
 
+.. note:: 
+
+    http://graydon2.dreamwidth.org/218040.html is a list of common systems
+    programming "footguns" absent from Rust
+
 Debugging Rust vs Others
 ------------------------
 
