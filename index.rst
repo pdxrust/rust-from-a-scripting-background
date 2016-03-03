@@ -5,7 +5,6 @@ Starting Rust From A Scripting Background
 
 Follow Along: http://rust-from-a-scripting-background.readthedocs.org/en/latest/
 
-
 Welcome!
 --------
 
@@ -13,13 +12,13 @@ You:
 
 * Have coded a bit?
 * Have used an interpreted language?
-* Have used a compiled language?
+* Are interested in Rust!
 
 We (pdxrust):
 
 * ~30 Rust users from the Portland area
 * Follow the Rust code of conduct
-* Have all kinds of different day jobs
+* Have the Servo team here this week!
 
 Tonight
 -------
@@ -30,6 +29,12 @@ What you can't get from the book:
 * Comfort with basic syntax and error messages
 * Contacts + new friends
 
+.. note:: 
+
+    Rust is an extremely feature-rich language and introductions are
+    usually taught in 1-2 full days of workshops. The best we can do in 1 hour
+    is build your interest and motivation, and make sure you know what
+    questions to ask as you get involved.
 
 Systems Components and Programming
 ----------------------------------
@@ -40,6 +45,8 @@ Systems Components and Programming
 
     Let's make sure we're all on the same page about some stuff you might
     never have needed to think about before.
+
+    tl;dr, computers are dumb but compilers are smart.
 
 Memory
 ------
@@ -68,19 +75,18 @@ CPU
 Assembly Language
 -----------------
 
-CPUs have various Instruction Set Architectures
+* CPUs have various Instruction Set Architectures
 
-Compiler turns the language you can read into instructions valid for the
-target CPU
+* Instructions are represented by assembly language commands
 
-Compilers optimize code and guess what you meant. They're usually right.
+* Compiler turns programming language into instructions valid for the
+  target CPU
 
-**To write smaller and faster code, you have to think harder about exactly what
-the CPU is doing.**
+* Compilers & interpreters optimize code and guess what you meant. They're
+  usually right.
 
-.. note:: 
-
-    Assembly language is human-readable, transliterated from CPU instructions. 
+**To write smaller and faster programs, you have to think harder about exactly
+what the CPU is doing.**
 
 Compiled vs Interpreted Languages
 ---------------------------------
@@ -89,7 +95,7 @@ Compiled vs Interpreted Languages
 
 * Transformed into machine code **before** execution
 * Executable is usually platform-specific
-* Possible to reason about some errors during compilation
+* Some errors are caught during compilation
 
 **Interpreted:**
 
@@ -865,6 +871,8 @@ What we skipped
 
 What next?
 ----------
+
+http://rust-from-a-scripting-background.readthedocs.org/en/latest/
 
 * Meet PDX Rustaceans and the Servo team
 * Set up Rust
