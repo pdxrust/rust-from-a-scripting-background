@@ -31,8 +31,8 @@ What you can't get from the book:
 * Contacts + new friends
 
 
-Computer Anatomy
-----------------
+Systems Components and Programming
+----------------------------------
 
 .. figure:: _static/mobo.png
 
@@ -58,10 +58,11 @@ Stack & Heap are abstractions for how a program manages its own memory
 CPU
 ---
 
-* Read instructions from the program, then
-    * Store and fetch bits from registers
-    * Do math on the values represented by those bits
-    * Store and fetch bits from RAM and disk
+* Read an instruction from the program, then
+    * Store and fetch bits from registers, or
+    * Do math on some bits that it has available, or
+    * Store and fetch bits from RAM and disk, then
+    * Read the next instruction
 * Plus some optimizations
 
 Assembly Language
@@ -77,16 +78,20 @@ Compilers optimize code and guess what you meant. They're usually right.
 **To write smaller and faster code, you have to think harder about exactly what
 the CPU is doing.**
 
+.. note:: 
+
+    Assembly language is human-readable, transliterated from CPU instructions. 
+
 Compiled vs Interpreted Languages
 ---------------------------------
 
-Compiled:
+**Compiled:**
 
 * Transformed into machine code **before** execution
 * Executable is usually platform-specific
 * Possible to reason about some errors during compilation
 
-Interpreted:
+**Interpreted:**
 
 * Transformed into machine code **during** execution
 * Source is usually platform-agnostic
@@ -109,12 +114,12 @@ Interpreted:
 Systems vs Application Programming
 ----------------------------------
 
-Systems programming: (assembly, C, C++, Rust)
+**Systems programming:** (assembly, C, C++, Rust)
 
 * Hardware access & performance
 * Interface between machine and applications
 
-Applications programming: (Python, Ruby, Java)
+**Applications programming:** (Python, Ruby, Java)
 
 * User-facing, higher-level languages
 * Often interpreted
@@ -139,18 +144,18 @@ Systems vs Application Code
 Rust vs Other Systems Languages
 -------------------------------
 
-Safe Rust:
-
-* Code which compiles is guaranteed to avoid certain errors
-* Makes concurrency easier
-* Points out everything that even looks like bugs
-
-Other languages (C, C++, Assembly):
+**Other languages**
 
 * Expect the programmer to prevent errors
 * Concurrency as a last resort
 * Older = more supported platforms/libraries
 * Minimal visibility into subtle bugs until you hit them
+
+**Safe Rust:**
+
+* Code which compiles is guaranteed to avoid certain errors
+* Makes concurrency easier
+* Points out everything that even looks like bugs
 
 .. note::
 
@@ -164,20 +169,19 @@ Other languages (C, C++, Assembly):
 Debugging Rust vs Others
 ------------------------
 
-Applications programming languages
+**Applications programming languages**
 
 * Most bugs are logic errors
 
-Other systems languages:
+**Other systems languages:**
 
 * Find memory use errors (sometimes) after code compiles
 * Logic errors are still around; fixing introduces memory use errors
 
-Safe Rust:
+**Safe Rust:**
 
 * Code with memory use errors does not compile
 * Bugs in safe Rust which compiles are more like those in applications programming
-
 
 
 Safe vs Unsafe Rust
@@ -205,11 +209,19 @@ The Rust Ecosystem
 
 .. figure:: _static/ecosystem.png
 
+.. note:: 
 
-Stable vs Nightly
------------------
+    Now we're on the same page about the basic concepts of systems
+    programming, let's take a high-level look at some things you'll need to
+    know about Rust to start using it
 
-|
+
+Channels
+--------
+
+* Stable
+* Beta
+* Nightly
 
 "The stable release channel will provide pain-free upgrades, and the nightly
 channel will give early adopters access to unfinished features as we work on
@@ -227,6 +239,7 @@ Libraries
 
 * Cargo is the package manager (pip, gem, npm, bower are package managers)
 * Libraries are called `crates`
+* http://doc.rust-lang.org/stable/book/crates-and-modules.html
 
 Rustaceans
 ----------
@@ -244,9 +257,17 @@ Rustaceans
 Installation Options
 --------------------
 
-* play.rust-lang.org (online, no crates, easy to link)
-* https://www.rust-lang.org/downloads.html (if just one version)
-* https://github.com/brson/multirust (if you want multiple Rusts)
+Just want to try it out?
+
+* https://play.rust-lang.org (online, no crates, easy to link)
+
+Need one version, with Cargo?
+
+* https://www.rust-lang.org/downloads.html
+
+Need several versions? 
+
+* https://github.com/brson/multirust (name will eventually change to rustup)
 
 
 Your First Rust Project
@@ -413,9 +434,18 @@ Hey, Pythonistas!
 Primitive Types
 ---------------
 
-* signed integers: i8, i16, i32, i64 and isize (pointer size)
-* unsigned integers: u8, u16, u32, u64 and usize (pointer size)
-* floating point: f32, f64
+.. note:: 
+
+    Have you ever been using a language without a strong type system, and
+    returned a string from a function where you were expecting to get an int
+    out? Rust forbids those bugs.
+
+* signed integers
+    * i8, i16, i32, i64 and isize (pointer size)
+* unsigned integers
+    * u8, u16, u32, u64 and usize (pointer size)
+* floating point: 
+    * f32, f64
 * char: Unicode scalar values, like 'a', 'α' and '∞' (4 bytes each)
 * bool: either true or false
 * arrays, like [1, 2, 3]
@@ -426,15 +456,14 @@ http://rustbyexample.com/primitives.html
 Things each type can do are in standard library docs, like
 http://doc.rust-lang.org/stable/std/primitive.bool.html
 
-
 .. note::
 
     Here we're skipping book sections...
 
-        4.11. Structs
-        4.12. Enums
-        4.16. Vectors
-        4.17. Strings
+       * 4.11. Structs
+       * 4.12. Enums
+       * 4.16. Vectors
+       * 4.17. Strings
 
 Functions
 ---------
@@ -442,9 +471,8 @@ Functions
 http://doc.rust-lang.org/stable/book/functions.html
 
 * Return using ``return`` or bare final expression
-* If a function returns something, specify what using ``->``
+* If a function returns something, ``->`` tells the type
 * Methods are functions attached to objects
-
 
 Functions have type signatures
 ------------------------------
@@ -452,7 +480,7 @@ Functions have type signatures
 .. figure:: _static/madlibs.png
 
 * Every type slot is filled by the name of a type
-* You can make your own. http://rustbyexample.com/custom_types.html
+* You can make your own types. http://rustbyexample.com/custom_types.html
 
 Functions example
 -----------------
@@ -545,7 +573,7 @@ Error: You've got to return what you said you would
 
 .. code-block:: c++
 
-    fn and(x: bool,  y: bool) -> &'static str{
+    fn and(x: bool,  y: bool) -> i32{
         if x && y {
             return 3;
         }
@@ -564,6 +592,49 @@ Error: You've got to return what you said you would
     <anon>:4         }
     ...
 
+Matching
+--------
+
+.. code-block:: c++
+
+    fn main() {
+        let number = 13;
+        // TODO ^ Try different values for `number`
+
+        println!("Tell me about {}", number);
+        match number {
+            // Match a single value
+            1 => println!("One!"),
+            // Match several values
+            2 | 3 | 5 | 7 | 11 => println!("This is a prime"),
+            // Match an inclusive range
+            13...19 => println!("A teen"),
+            // Handle the rest of cases
+            _ => println!("Ain't special"),
+        }
+    }
+
+http://rustbyexample.com/flow_control/match.html
+
+You can do things with match results
+------------------------------------
+
+.. code-block:: c++
+
+    fn main() {
+        let boolean = true;
+        // Match is an expression too
+        let binary = match boolean {
+            // The arms of a match must cover all the possible values
+            false => 0,
+            true => 1,
+            // TODO ^ Try commenting out one of these arms
+        };
+
+        println!("{} -> {}", boolean, binary);
+    }
+
+http://rustbyexample.com/flow_control/match.html
 
 Looping
 -------
