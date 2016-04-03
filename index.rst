@@ -29,7 +29,7 @@ What you can't get from the book:
 * Comfort with basic syntax and error messages
 * Contacts + new friends
 
-.. note:: 
+.. note::
 
     Rust is an extremely feature-rich language and introductions are
     usually taught in 1-2 full days of workshops. The best we can do in 1 hour
@@ -47,6 +47,9 @@ Systems Components and Programming
     never have needed to think about before.
 
     tl;dr, computers are dumb but compilers are smart.
+
+    https://people.cs.clemson.edu/~mark/uprog.html is a neat overview of very
+    low-level stuff.
 
 Memory
 ------
@@ -143,7 +146,7 @@ Systems vs Application Code
 
 (https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29#/media/File:LAMP_software_bundle.svg)
 
-.. note:: 
+.. note::
 
     Systems code (ie kernel, drivers, etc) is pretty much all C today.
 
@@ -172,7 +175,7 @@ Rust vs Other Systems Languages
     hunting a job at a C++-only shop, the things you learn from Rust will
     improve your code, but it might not be your best choice
 
-.. note:: 
+.. note::
 
     http://graydon2.dreamwidth.org/218040.html is a list of common systems
     programming "footguns" absent from Rust
@@ -220,7 +223,7 @@ The Rust Ecosystem
 
 .. figure:: _static/ecosystem.png
 
-.. note:: 
+.. note::
 
     Now we're on the same page about the basic concepts of systems
     programming, let's take a high-level look at some things you'll need to
@@ -276,7 +279,7 @@ Need one version, with Cargo?
 
 * https://www.rust-lang.org/downloads.html
 
-Need several versions? 
+Need several versions?
 
 * https://github.com/brson/multirust (name will eventually change to rustup)
 
@@ -432,7 +435,7 @@ Hey, Pythonistas!
         , what_to_say
     ) ;           }
 
-.. note:: 
+.. note::
 
     The only whitespace which matters is that which separates tokens.
     ``fnmain`` is different from ``fn main``. Other than that, the compiler
@@ -445,7 +448,7 @@ Hey, Pythonistas!
 Primitive Types
 ---------------
 
-.. note:: 
+.. note::
 
     Have you ever been using a language without a strong type system, and
     returned a string from a function where you were expecting to get an int
@@ -455,7 +458,7 @@ Primitive Types
     * i8, i16, i32, i64 and isize (pointer size)
 * unsigned integers
     * u8, u16, u32, u64 and usize (pointer size)
-* floating point: 
+* floating point:
     * f32, f64
 * char: Unicode scalar values, like 'a', 'α' and '∞' (4 bytes each)
 * bool: either true or false
@@ -854,7 +857,7 @@ What we skipped
 ---------------
 
 * Unsafe
-* Concurrency 
+* Concurrency
 * File IO
 * Using crates
 * The type system
