@@ -1,8 +1,6 @@
 Starting Rust From A Scripting Background
 =========================================
 
-3/2/2016
-
 Follow Along: http://rust-from-a-scripting-background.readthedocs.org/en/latest/
 
 Welcome!
@@ -14,14 +12,8 @@ You:
 * Have used an interpreted language?
 * Are interested in Rust!
 
-We (pdxrust):
-
-* ~30 Rust users from the Portland area
-* Follow the Rust code of conduct
-* Have the Servo team here this week!
-
-Tonight
--------
+Today
+-----
 
 What you can't get from the book:
 
@@ -882,12 +874,9 @@ What next?
 
 http://rust-from-a-scripting-background.readthedocs.org/en/latest/
 
-* Meet PDX Rustaceans and the Servo team
 * Set up Rust
 * Join us on IRC (#rust on irc.mozilla.org)
 * Write some code!
         * Contribute to the compiler? Mentored bugs at https://public.etherpad-mozilla.org/p/rust-curated
         * Search GitHub issues for language:rust http://bit.ly/24C5JNH
         * Do some exercises: https://github.com/carols10cents/rustlings
-
-
